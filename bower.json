@@ -1,0 +1,22 @@
+{
+  "name": "my-first-angular-app",
+  "authors": [
+    "asy"
+  ],
+  "description": "Test App Using Bower",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "angular-animate": "1.2.4" // bower install angular-animate#versionid --save
+  }
+}

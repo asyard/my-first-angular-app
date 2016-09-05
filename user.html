@@ -1,0 +1,29 @@
+<div>
+    <h1>{{message}}, {{user.name}} {{user.id}} </h1>
+    {{ error }}
+    <img ng-src="{{user.avatar_url}}" style="width:256px; height:256px;" />
+    <br/> Repos
+    <br/> Order:
+    <select ng-model="repoSortOrder">
+        <option value="+name">Name (a>z)</option>
+        <option value="+stargazers_count">Star Count (Asc)</option>
+        <option value="-created_at">Created Date (Desc)</option>
+    </select>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Stars</th>
+            <th>Creation Date</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="repo in repos | orderBy : repoSortOrder">
+            <td>{{repo.name}}</td>
+            <td>{{repo.stargazers_count | number}}</td>
+            <td>{{repo.created_at | date:'short'}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
